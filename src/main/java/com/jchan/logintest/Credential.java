@@ -4,6 +4,7 @@
  */
 package com.jchan.logintest;
 
+import com.jchan.jtableutils.JDataColumn;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,8 +23,10 @@ public class Credential {
     private Long id;
     
     @Column(unique=true)
+    @JDataColumn(index=0)
     private String userName;
     
+    @JDataColumn(index=1)
     private String password;
 
     public Long getId() {
